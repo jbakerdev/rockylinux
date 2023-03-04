@@ -56,7 +56,7 @@ jobs:
           flavor: |
             latest=false
           tags: |
-            type=raw,value=asdf
+            type=raw,value=${{matrix.rockylinux-version}}
             type=ref,event=branch
             type=ref,event=pr
             type=schedule,pattern=nightly
