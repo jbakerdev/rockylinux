@@ -1,6 +1,7 @@
-FROM rockylinux:8
-LABEL name="jbakerdev/rockylinux:8" \
-      description="jbakerdev Rocky Linux 8"
+ARG BASE=8
+FROM rockylinux:${BASE}
+LABEL name="jbakerdev/rockylinux${BASE}" \
+      description="Rocky Linux ${BASE}"
 
 # Update and install packages
 RUN dnf update -y \
